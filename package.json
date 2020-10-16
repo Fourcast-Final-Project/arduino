@@ -1,0 +1,24 @@
+{
+  "name": "arduino",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fourcast-Final-Project/arduino.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fourcast-Final-Project/arduino/issues"
+  },
+  "homepage": "https://github.com/Fourcast-Final-Project/arduino#readme",
+  "dependencies": {
+    "johnny-five": "^2.0.0",
+    "nodebots-interchange": "^2.0.1"
+  }
+}
