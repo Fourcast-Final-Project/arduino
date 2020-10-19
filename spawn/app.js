@@ -36,11 +36,11 @@ async function updateAllLocations(locations) {
   }
 }
 
-function algorithmLogic(currentWaterLevel) {
+function algorithmLogic(currentWaterLevel) { // logic ngaco parah kalo mulai dri 0 :") help!
   const max = currentWaterLevel + 0.001;
   const min = currentWaterLevel - 1;
   // if (min > 0) {
-  if ((min < 0) && (currentWaterLevel < 1)) {
+  if ((min < 0) && (currentWaterLevel < 2)) {
     return Math.floor(((Math.random() * max) * 100) / 100);
   } else {
     return Math.floor((Math.random() * (max - min + 1) + min) * 100) / 100;
