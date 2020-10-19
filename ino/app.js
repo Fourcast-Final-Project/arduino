@@ -25,11 +25,8 @@ let job = new CronJob('*/1 * * * * *', function() {
   if (result) {
     console.log("Proximity: ");
     console.log("  cm  : ", result);
-    firebase.database().ref('/data').set({
-      latitude: -6.209963999999999,
-      longitude: 106.73527,
-      city: 'Jakarta',
-      waterLevel : result
+    firebase.database().ref('/Location/2').update({
+      waterLevel: result
     });
   }
 }, null, true, 'Asia/Jakarta');
