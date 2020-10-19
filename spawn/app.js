@@ -37,9 +37,11 @@ async function updateAllLocations(locations) {
 }
 
 function algorithmLogic(currentWaterLevel) {
-  const max = currentWaterLevel + 2;
-  const min = currentWaterLevel - 2;
-  return Math.floor((Math.random() * (max - min + 1) + min) * 100) / 100;
+  const max = currentWaterLevel + 0.001;
+  const min = currentWaterLevel - 1;
+  if (min > 0) {
+    return Math.floor((Math.random() * (max - min + 1) + min) * 100) / 100;
+  }
 }
 
 async function generate() {
@@ -51,7 +53,7 @@ async function generate() {
   }
 }
 
-var job = new CronJob('*/1 * * * * *', function() {
+var job = new CronJob('*/5 * * * * *', function() {
   generate();
 }, null, true, 'Asia/Jakarta');
 job.start();
