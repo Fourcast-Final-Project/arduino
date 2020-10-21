@@ -25,7 +25,7 @@ let job = new CronJob('*/1 * * * * *', function() {
   if (result) {
     console.log("Proximity: ");
     console.log("  cm  : ", result);
-    firebase.database().ref('/Location/2').update({
+    firebase.database().ref('/Location/29').update({
       waterLevel: result
     });
   }
