@@ -35,7 +35,10 @@ async function updateAllLocations(locations) {
           waterLevel
         }
       });
-    }));
+    }))
+    .catch(err => {
+      console.log(err);
+    });
   } catch (err) {
     console.log(err);
   }

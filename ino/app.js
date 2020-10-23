@@ -16,7 +16,8 @@ function addNewData () {
 
     proximity.on("data", () => {
       const { centimeters } = proximity;
-      result = centimeters;
+      result = Math.floor((16 - centimeters) * 10);
+      // result = centimeters;
     });
   });
 }
